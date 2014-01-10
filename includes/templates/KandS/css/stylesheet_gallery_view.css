@@ -1,0 +1,79 @@
+
+#galleryBox{
+  float:right;
+  width:200px;
+  font-size: 11px;
+  margin: 5px 0px 0px 0px;
+}
+
+#galleryBox img{
+  padding-left : 10px;
+}
+
+#galleryBox select{
+  font-size: 9px;
+  margin-bottom: 5px;
+}
+
+#galleryBoxMid{
+  float: left;
+  width: 200px;
+  margin: 2px 0px 2px 0px;
+  font-size: 12px;
+}
+
+#productsListingListingTopLinks, #productsListingListingBottomLinks{
+  font-family: Verdana;
+  padding: 8px 0px 8px 0px;
+  font: 14px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #f7f0f0;
+  margin: 3px 0px 0px 0px;
+  width: 100%;
+}
+
+.currentPage{
+  padding: 4px;
+  border: 1px solid #c4c8cc;
+  background-color: white;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.prevPg{
+  padding: 4px;
+  background-color: #dddddd;
+  -moz-border-radius: 8px 0px 0px 8px;
+  -webkit-border-radius: 8px 0px 0px 8px;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.nextPg{
+  padding: 4px;
+  background-color: #dddddd;
+  -moz-border-radius: 0px 8px 8px 0px;
+  -webkit-border-radius: 0px 8px 8px 0px;
+  border-radius: 0px 8px 8px 0px;
+}
+
+.nonCurrent{
+  padding: 4px;
+  background-color: #dddddd;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#maxInfo{
+margin: 5px 0px;
+}
+
+#displayOrder{
+ }
+
+#linksBox{
+  float: left;
+  width: 300px;
+  margin: 5px 0px 5px 0px;
+}

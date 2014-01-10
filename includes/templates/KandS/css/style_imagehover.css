@@ -1,0 +1,39 @@
+#trailimageid {
+  position: absolute;
+  visibility: hidden;
+  left: 0px;
+  top: 0px;
+  width: 220px;
+  height: 0px;
+  z-index: 1000;
+
+}
+
+#trailimageid div {
+  padding: 0px;
+  background-color: #FFFFCF;
+  border: 2px solid #c4c8cc;
+  text-align: center;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 15px 15px 15px;
+}
+
+#trailimageid h1 {
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0;
+  padding: 3px 0px;
+  width: 100%;
+  background-color: #ddd;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em 1em 0em 0em;
+  border-radius: 1em;
+  border: 1px solid #c4c8cc;
+  text-align: center;
+}
+
+#trailimageid img {
+  margin: 10px 5px 10px 5px;
+  border: none;
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="includes/templates/KandS/css/stylesheet_header_menu.css" />
+<link rel="stylesheet" type="text/css" href="includes/templates/KandS/css/stylesheet_kands.css" />
+<style type="text/css">
+body {  
+	behavior: url(includes/csshover.htc);
+	font-size:100%;
+	}
+div#simplecategoriestree li a:hover, div#simplecategoriestree li.submenu li.submenu:hover, div#simplecategoriestree ul.level2 a:hover {color: #4f4f4f!important;background:#D5D5D5;}
+
+#simplecategoriestree{
+/*	width:300px;
+	margin:0 auto;
+  text-align:center;
+*/	z-index:1000;
+	position:relative;
+
+	background-color:#CCC;
+}
+
+/*#simplecategoriestree a{
+	text-decoration:none;
+}
+*/
+div#simplecategoriestree ul {
+	margin:0px;
+	padding:0px;
+	}
+	
+div#simplecategoriestree li {
+/*	position:relative;
+	list-style:none; 
+*/	margin:0px; 
+	line-height:1.8em;
+	width:220px;
+	*width:220px;
+	}
+	
+div#simplecategoriestree ul li{
+	float:left;
+}
+
+div#simplecategoriestree ul.level1 {
+	width:220px;
+	margin:0 auto; 
+	text-align:center;
+	background:#000; /*background color of top menu when NOT selected. */
+	z-index:1000;
+	float:left;
+	}
+
+div#simplecategoriestree li a {
+	display: block;
+	/* Hides from IE5-mac \*/
+	height: 1%;
+	/* End hide from IE5-mac */ 
+	padding: .6em 0px; 
+	text-decoration: none; 
+	text-transform:uppercase; 
+	color:#ffffff; 
+	text-align:left; 
+	border-right:1px solid #ffffff;
+}	
+
+div#simplecategoriestree li:hover {}
+
+div#simplecategoriestree li.submenu:hover {}
+
+div#simplecategoriestree li a.noLine {
+	border:none;
+}
+
+div#simplecategoriestree ul a {
+	width: 220px;
+	z-index:1000;
+}
+
+#simplecategoriestree ul ul {
+	display: none;
+}
+
+#simplecategoriestree ul ul li {
+	border-bottom: 1px solid #CCC; 
+	width:100%;
+	z-index:1000;
+	margin: 0px 0px 0px 0px;
+}
+
+#simplecategoriestree ul.level2{
+	position: absolute; 
+	width: 220px;
+	display:block;
+	z-index:1000;
+	list-style:none;
+	left:0px;
+	background:#999;
+}
+
+/*#simplecategoriestree ul.level2 {
+	z-index:1000;
+	position:absolute;
+}*/
+
+#simplecategoriestree ul.level2 a {
+	padding: 0em 0 0em 0.25em;
+	color: black;  /* this is text color on drop-down submenu */
+	text-transform:none;
+	} 
+
+#simplecategoriestree ul.level2 a:hover {
+	width:215px;
+	height:1.8em;
+}
+
+#simplecategoriestree ul.level3{
+	top: 1.8em; 
+	left: 220px; 
+	background:#99a;
+	/*width:130px;*/
+}
+
+#simplecategoriestree ul.level3 a:hover {
+	width:116px;
+}
+
+#simplecategoriestree ul.level4, 
+#simplecategoriestree ul.level5, 
+#simplecategoriestree ul.level6, 
+#simplecategoriestree ul.level7,
+#simplecategoriestree ul.level8{
+	top: 1.8em; 
+	left: 120px; 
+	background:#99a;
+	width:130px;
+}
+
+#simplecategoriestree ul.level2 li.submenu:hover ul.level3,
+#simplecategoriestree ul.level3 li.submenu:hover ul.level4,
+#simplecategoriestree ul.level4 li.submenu:hover ul.level5,
+#simplecategoriestree ul.level5 li.submenu:hover ul.level6,
+#simplecategoriestree ul.level6 li.submenu:hover ul.level7,
+#simplecategoriestree ul.level7 li.submenu:hover ul.level8 {
+	position: absolute; 
+	width: 120px;
+	display:block;
+	z-index:1000;
+	list-style:none;
+}
+	
+.clearBoth {
+	clear:both;
+	height:0;
+	font-size:0;
+	line-height:0;
+	}
+ 
+</style>
+
+</head>
+
+<body>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="contentMainWrapper">
+  <tr>
+
+ <td id="navColumnOne" class="columnLeft" style="width: 225px">
+<div id="navColumnOneWrapper" style="width: 220px"><!--// bof: simplecategoriestree //-->
+
+<div class="leftBoxContainer" id="simplecategoriestree" style="width: 220px">
+
+
+<!--<div id="simplecategoriestree">-->
+<!--<ul class="level1">
+ 	<li class="submenu"><a href="">Lighting</a>
+		<ul class="level2">
+			<li><a href="">Bathroom</a>
+      </li>
+			<li class="submenu"><a href="">Ceiling Fittings</a>
+				<ul class="level3">
+					<li><a href="">Flush</a>
+          </li>
+					<li class="submenu"><a href="">Multi Arm</a>
+						<ul class="level4">
+            <li><a href="">Contempary</a>
+            </li>
+            <li><a href="">Modern</a>
+            </li>
+						<li class="submenu"><a href="">Traditional</a>
+              <ul class="level5">
+                <li><a href="">3 & 4 Arm</a>
+                </li>
+                <li><a href="">5 Light</a>
+                </li>
+                <li><a href="">6 Light</a>
+                </li>
+                <li><a href="">8 Light</a>
+                </li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+        <li><a href="">Pendant</a>
+        </li>
+      </ul>
+    </li>
+  <li><a href="">Exterior Lighting</a></li>
+  <li><a href"">Floor Lamps</a></li>
+  <li><a href="">Illuminated Mirrors & Cabinets</a></li>
+  <li><a href="">Low Energy / LED</a></li>
+  <li><a href">Shades</a></li>
+  <li><a href="">Table Lamps</a></li>
+  <li><a href="">Wall Lamps</a></li>
+</ul>
+</li>
+</ul>
+--></div>
+
+
+</div>
+</td></tr></table>
+</body>
+</html>

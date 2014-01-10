@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {  
+	behavior: url(includes/csshover.htc);
+	}
+#simplecategoriestree{
+/*	width:300px;
+	margin:0 auto;
+  text-align:center;
+*/	z-index:1000;
+	position:relative;
+
+	background-color:#CCC;
+}
+
+/*#simplecategoriestree a{
+	text-decoration:none;
+}
+*/
+div#simplecategoriestree ul {
+	margin:0px;
+	padding:0px;
+	}
+	
+div#simplecategoriestree li {
+/*	position:relative;
+	list-style:none; 
+*/	margin:0px; 
+	line-height:1.8em;
+	width:550px;
+	*width:550px;
+	}
+
+div#simplecategoriestree ul.level1 {
+	width:220px;
+	margin:0 auto; 
+	text-align:center;
+	background:#000; /*background color of top menu when NOT selected. */
+	z-index:1000;
+	float:left;
+	}
+
+div#simplecategoriestree li a {
+	display: block;
+	/* Hides from IE5-mac \*/
+	height: 1%;
+	/* End hide from IE5-mac */ 
+	padding: .6em 0px; 
+	text-decoration: none; 
+	text-transform:uppercase; 
+	color:#ffffff; 
+	text-align:left; 
+	border-right:1px solid #ffffff;
+}	
+
+div#simplecategoriestree li:hover {}
+
+div#simplecategoriestree li.submenu:hover {}
+
+div#simplecategoriestree li a.noLine {
+	border:none;
+}
+
+div#simplecategoriestree ul a {
+	width: 220px;
+	z-index:1000;
+}
+
+#simplecategoriestree ul ul {
+	display: none;
+}
+
+#simplecategoriestree ul ul li {
+	border-bottom: 1px solid #CCC; 
+	width:100%;
+	z-index:1000;
+	margin: 0px 0px 0px 0px;
+}
+
+#simplecategoriestree ul.level2{
+	position: absolute; 
+	width: 220px;
+	display:block;
+	z-index:1000;
+	list-style:none;
+	left:0px;
+	background:#999;
+}
+
+/*#simplecategoriestree ul.level2 {
+	z-index:1000;
+	position:absolute;
+}*/
+
+#simplecategoriestree ul.level2 a {
+	padding: 0em 0 0em 0.25em;
+	color: black;  /* this is text color on drop-down submenu */
+	text-transform:none;
+	} 
+
+#simplecategoriestree ul.level2 a:hover {
+	width:215px;
+	height:1.8em;
+}
+
+#simplecategoriestree ul.level3{
+	top: 1.8em; 
+	left: 220px; 
+	background:#99a;
+	/*width:130px;*/
+}
+
+#simplecategoriestree ul.level3 a:hover {
+	width:116px;
+}
+
+#simplecategoriestree ul.level4, 
+#simplecategoriestree ul.level5, 
+#simplecategoriestree ul.level6, 
+#simplecategoriestree ul.level7,
+#simplecategoriestree ul.level8{
+	top: 1.8em; 
+	left: 120px; 
+	background:#99a;
+	width:130px;
+}
+
+#simplecategoriestree ul.level2 li.submenu:hover ul.level3,
+#simplecategoriestree ul.level3 li.submenu:hover ul.level4,
+#simplecategoriestree ul.level4 li.submenu:hover ul.level5,
+#simplecategoriestree ul.level5 li.submenu:hover ul.level6,
+#simplecategoriestree ul.level6 li.submenu:hover ul.level7,
+#simplecategoriestree ul.level7 li.submenu:hover ul.level8 {
+	position: absolute; 
+	width: 120px;
+	display:block;
+	z-index:1000;
+	list-style:none;
+}

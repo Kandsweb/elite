@@ -1,0 +1,195 @@
+#wsjpecr.jpecrdefault {
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+	color: #000;
+}
+#wsjpecr.jpecrdefault * {
+	font-size: 1.0em;
+}
+#wsjpecr.jpecrdefault h1 {
+	text-align: left;
+	font-size: 18px;
+}
+#wsjpecr.jpecrdefault p {
+	text-align: justify;
+	margin: 5px 0px;
+	padding: 5px 0px;
+}
+
+#wsjpecr.jpecrdefault a.button {
+	border: 1px solid #999;
+	background: #CCC;
+	background: -moz-linear-gradient(#DDD, #CCC);
+    background: -ms-linear-gradient(#DDD, #CCC);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #DDD), color-stop(100%, #CCC));
+    background: -webkit-linear-gradient(#DDD, #CCC);
+    background: -o-linear-gradient(#DDD, #CCC);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDD', endColorstr='#CCC');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDD', endColorstr='#CCC')";
+    background: linear-gradient(#DDD, #CCC);
+	padding: 4px 10px;
+	margin-left: 10px;
+	color: #444;
+	text-decoration: none;
+	border-radius: 5px;
+	moz-border-radius: 5px;
+}
+#wsjpecr.jpecrdefault a.button:focus {
+	border-color: #ffcc33;
+}
+
+#wsjpecr.jpecrdefault.growl.bar .jpecrGrowler {
+	position: relative;
+	background: #ddddff;
+	background: -moz-linear-gradient(#cab4a3, #ddddff);
+    background: -ms-linear-gradient(#cab4a3, #ddddff);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cab4a3), color-stop(100%, #ddddff));
+    background: -webkit-linear-gradient(#cab4a3, #ddddff);
+    background: -o-linear-gradient(#cab4a3, #ddddff);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cab4a3', endColorstr='#ddddff');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#cab4a3', endColorstr='#ddddff')";
+    background: linear-gradient(#cab4a3, #ddddff);
+	border-bottom: 1px solid #444;
+	-webkit-box-shadow: #000 0px 0px 10px;
+	-moz-box-shadow: #000 0px 0px 10px;
+	box-shadow: #000 0px 0px 10px;
+	z-index: 900000;
+	padding: 10px 20px 10px 42px;
+}
+#wsjpecr.jpecrdefault.growl.bar  .jpecrGrowler .jpecrGrowlerIcon {
+	position: absolute;
+	top: 10px;
+	left: 16px;
+}
+#wsjpecr.jpecrdefault.growl.bar  .jpecrGrowler .jpecrGrowlerButtons {
+	float: right;
+}
+#wsjpecr.jpecrdefault.growl.bar  .jpecrGrowler .jpecrGrowlerMessage {
+	padding-right: 101px;
+}
+
+#wsjpecr.jpecrdefault.growl.box .jpecrGrowler {
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	background: #cab4a3;
+	background: -moz-linear-gradient(#cab4a3, #ddddff);
+    background: -ms-linear-gradient(#cab4a3, #ddddff);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cab4a3), color-stop(100%, #ddddff));
+    background: -webkit-linear-gradient(#cab4a3, #ddddff);
+    background: -o-linear-gradient(#cab4a3, #ddddff);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cab4a3', endColorstr='#ddddff');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#cab4a3', endColorstr='#ddddff')";
+    background: linear-gradient(#cab4a3, #ddddff);
+	border-bottom: 1px solid #444;
+	-webkit-box-shadow: #000 0px 0px 10px;
+	-moz-box-shadow: #000 0px 0px 10px;
+	box-shadow: #000 0px 0px 10px;
+	z-index: 900000;
+	padding: 10px 20px 55px 42px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	width: 300px;
+}
+#wsjpecr.jpecrdefault.growl.box  .jpecrGrowler .jpecrGrowlerIcon {
+	position: absolute;
+	top: 10px;
+	left: 16px;
+}
+#wsjpecr.jpecrdefault.growl.box  .jpecrGrowler .jpecrGrowlerButtons {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	text-align: right;
+}
+
+#wsjpecr.jpecrdefault.dropdown .jpecrPopup {
+	position: relative;
+	z-index: 899999;
+	width: 980px;
+	margin: 0px auto;
+	background: #ddddff;
+	background: -moz-linear-gradient(#cab4a3, #ddddff);
+    background: -ms-linear-gradient(#cab4a3, #ddddff);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cab4a3), color-stop(100%, #ddddff));
+    background: -webkit-linear-gradient(#cab4a3, #ddddff);
+    background: -o-linear-gradient(#cab4a3, #ddddff);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cab4a3', endColorstr='#ddddff');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#cab4a3', endColorstr='#ddddff')";
+    background: linear-gradient(#cab4a3, #ddddff);
+	border: 1px solid #444;
+	border-top: none;
+	-webkit-box-shadow: #000 0px 0px 10px;
+	-moz-box-shadow: #000 0px 0px 10px;
+	box-shadow: #000 0px 0px 10px;
+	padding: 15px 25px;
+	border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+}
+#wsjpecr.jpecrdefault.modal .jpecrPopup {
+	position: relative;
+	z-index: 899999;
+	margin: 0px 25px 25px 25px;
+	background: #ddddff;
+	background: -moz-linear-gradient(#cab4a3, #ddddff);
+    background: -ms-linear-gradient(#cab4a3, #ddddff);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cab4a3), color-stop(100%, #ddddff));
+    background: -webkit-linear-gradient(#cab4a3, #ddddff);
+    background: -o-linear-gradient(#cab4a3, #ddddff);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cab4a3', endColorstr='#ddddff');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#cab4a3', endColorstr='#ddddff')";
+    background: linear-gradient(#cab4a3, #ddddff);
+	border: 1px solid #444;
+	-webkit-box-shadow: #000 0px 0px 10px;
+	-moz-box-shadow: #000 0px 0px 10px;
+	box-shadow: #000 0px 0px 10px;
+	padding: 15px 25px;
+	width: 980px;
+	margin: 100px auto;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#wsjpecr.jpecrdefault .jpecrPopup table {
+	border: 1px solid #999;
+	margin-bottom: 20px;
+}
+#wsjpecr.jpecrdefault .jpecrPopup table th, #wsjpecr.jpecrdefault .jpecrPopup table td {
+	background-color: #fafafa;
+	text-align: left;
+	padding: 6px;
+}
+#wsjpecr.jpecrdefault .jpecrPopup table th {
+	background-color: #999;
+	border: none;
+	color: #fafafa;
+}
+#wsjpecr.jpecrdefault .jpecrPopup table th.nowrap { white-space: nowrap; padding-left: 16px; }
+#wsjpecr.jpecrdefault .jpecrPopup table td { border-top: 1px solid #999; text-align: left; }
+#wsjpecr.jpecrdefault .jpecrPopup table tr:hover td { background-color: #eee; }
+#wsjpecr.jpecrdefault .jpecrPopup table td.nowrap { white-space: nowrap; width: 60px; }
+#wsjpecr.jpecrdefault .jpecrPopup table td * { vertical-align: middle; }
+#wsjpecr.jpecrdefault .jpecrPopup table td input { margin: 0px 5px 0px 10px; }
+#wsjpecr.jpecrdefault .jpecrPopup table tfoot td { background-color: #ccc; }
+#wsjpecr.jpecrdefault .jpecrPopup table tfoot:hover td { background-color: #bbb; }
+#wsjpecr.jpecrdefault .jpecrPopup .jpecrPopupButtons { text-align: right; padding-bottom: 15px; position: relative; vertical-align: middle; }
+
+#wsjpecr.jpecrdefault .jpecrPopup .jpecrPopupButtons #jpecrError {
+	display: inline-block;
+	padding: 0px 10px 0px 25px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	line-height: 16px;
+	background-image: url('includes/cookie_law/error.png');
+	overflow: visible;
+}
+
+.jpecrPopup a, .jpecrPopup a:visited{color: #333;}
+.jpecrPopup a:hover{color: #000;}

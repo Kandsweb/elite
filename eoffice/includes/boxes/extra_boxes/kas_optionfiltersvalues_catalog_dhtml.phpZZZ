@@ -1,0 +1,9 @@
+<?php
+
+// +------------------------------------------------------------------------------+
+// |KaS - Admin page for storiing the values and names for the option filters     |
+// +------------------------------------------------------------------------------+
+
+
+  $za_contents[] = array('text' => 'Filter Options', 'link' => zen_href_link('kas_option_filters_values.php', '', 'NONSSL'));
+?>

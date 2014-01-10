@@ -1,0 +1,67 @@
+#optionsboxHeading, #filterboxHeading{
+  display: none;
+}
+
+.optionBoxTop{
+  font-weight: normal;
+  font-size: 12px;
+  border-bottom: 2px solid #c4c8cc;
+  text-align: center;
+  padding: 5px 0px 5px 0px;
+  font-weight: bold;
+}
+
+.optionBoxGroup {
+  font-size: 12px;
+  padding: 0px;
+  border-top: 1px solid #c4c8cc;
+  border-bottom: 1px solid #c4c8cc;
+}
+
+.optionBoxGroup h4{
+  font-weight: bold;
+  font-size: 12px;
+  padding: 3px 0px 3px 8px;
+  margin: 0px;
+  border-top: 1px solid #c4c8cc;
+  border-bottom: 1px solid #c4c8cc;
+}
+
+.optionBoxGroup img{
+  float: right;
+}
+
+.optionBoxApply{
+  font: 11px Verdana;
+  text-align: center;
+  width: 70%;
+  padding: 1px;
+  margin: 5px 0px 8px 25px;
+  border: 5px solid #c4c8cc;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 3px 3px 4px #000;
+
+}
+
+.optionBox{
+  margin: 10px;
+  background-color: #e5e5e5;
+  text-align: left;
+  border: 5px solid #c4c8cc;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 3px 3px 4px #000;
+   For IE 8
+  -ms-option: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";*/
+  /*/* For IE 5.5 - 7
+  option: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');*/
+}

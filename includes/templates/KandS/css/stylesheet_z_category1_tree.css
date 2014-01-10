@@ -1,0 +1,175 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {  
+	behavior: url(includes/csshover.htc);
+	}
+div#simplecategoriestree{
+	width:230px;
+	margin:0 auto;
+	z-index:950;
+	position:relative;
+	/*height:350px;*/
+	padding:10px;
+	background-color:#FFF;
+}
+
+/*#simplecategoriestree a{
+	text-decoration:none;
+}
+*/
+div#simplecategoriestree ul {
+	margin:0px;
+	padding:0px;
+	background-color:#3F3;
+	}
+	
+div#simplecategoriestree li {
+	position:relative;
+	text-decoration:none;
+	text-align:left;
+	list-style:none; 
+	margin:0px 0px 0px 10px; 
+	line-height:1.2em;
+	width:220px;
+	*width:220px;
+	}
+
+div#simplecategoriestree li a {
+	display: block;
+	/* Hides from IE5-mac \*/
+	height: 1%;
+	/* End hide from IE5-mac */ 
+	padding: .6em 0px; 
+	text-decoration: none; 
+	color:#000;
+	font-size:14px;
+	text-align:left; 
+	/*border-right:1px solid #ffffff;
+	text-transform:uppercase; 
+	
+	font-weight:bold;*/
+}	
+
+div#simplecategoriestree ul.level1 li.submenu {
+	background-color:#FFF;
+	width:220px;
+	margin:0 auto; 
+	text-align:center;
+	background:#EEE; /*background color of top menu when NOT selected. */
+	z-index:950;
+	float:left;
+	list-style:none;
+	}
+	
+div#simplecategoriestree ul.level1 li a {
+	font-weight:bold;
+	background-color:#555;
+	padding:10px 10px 10px;
+}
+
+div#simplecategoriestree ul.level2{
+	background-color:#EEE;
+}
+
+div#simplecategoriestree ul.level2 li{
+	padding:0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+div#simplecategoriestree ul.level2 li a {
+	background-color:#EEE;
+	font-weight:normal;
+	width:190px;
+}
+
+div#simplecategoriestree ul.level2 a:hover {
+	background-color:#CCC;
+	width:210px;
+	padding:10px 0px 10px 10px;
+	/*border-bottom: 1px solid #CCC; 
+	border-right:1px solid #CCC; 
+	border-bottom:1px solid #CCC; */
+}
+
+div#simplecategoriestree ul.level2 li.submenu{
+	font-weight:normal;
+	/*background-color:#FFF;	backgoung col;our for level2 items that have a sub menu*/
+	padding: 0px 0px 0px 0px; 
+	margin: 0px 0px 0px 0px;
+	width:220px;
+}
+
+div#simplecategoriestree ul.level2 li.submenu a{
+	font-weight:normal;
+	/*background-color:#FFF;	backgoung colour for level2 items that have a sub menu
+	line-height:1.2em;
+	padding: 0.6em 0px;*/
+}
+
+
+div#simplecategoriestree ul.level3 {
+	position:relative;
+	background-color:#eee!important;
+	left:220px;
+	top:0px;
+	z-index:980;
+	width:120px;
+
+}
+
+div#simplecategoriestree ul.level3 li.submenu{
+	font-weight:normal;
+	/*background-color:#FFF;	backgoung col;our for level3 items that have a sub menu*/
+	padding: 0px 0px 0px 0px; 
+	margin: 0px 0px 0px 0px;
+	width:120px;
+}
+
+div#simplecategoriestree ul.level3 li a {
+	background-color:#ccc;
+	font-weight:normal;
+	width:120px;
+}
+
+div#simplecategoriestree ul.level3 li a:hover {
+	background-color:#ddd;
+	font-weight:normal;
+	width:130px;
+}
+
+div#simplecategoriestree ul.level4, div#simplecategoriestree ul.level5, div#simplecategoriestree ul.level6, div#simplecategoriestree ul.level7, div#simplecategoriestree ul.level8 {
+	position:relative;
+	background-color:#eee!important;
+	left:140px;
+	top:0px;
+	z-index:980;
+	width:120px;
+}
+
+div#simplecategoriestree ul.level3, div#simplecategoriestree ul.level4, div#simplecategoriestree ul.level5, div#simplecategoriestree ul.level6, div#simplecategoriestree ul.level7, div#simplecategoriestree ul.level8 {
+	display: none;	/*this hides the level3 and lover items*/
+}
+
+div#simplecategoriestree ul.level2 li.submenu:hover ul.level3,
+div#simplecategoriestree ul.level3 li.submenu:hover ul.level4,
+div#simplecategoriestree ul.level4 li.submenu:hover ul.level5,
+div#simplecategoriestree ul.level5 li.submenu:hover ul.level6,
+div#simplecategoriestree ul.level6 li.submenu:hover ul.level7,
+div#simplecategoriestree ul.level7 li.submenu:hover ul.level8 {
+	position: absolute; 
+	width: 120px;
+	display:block;
+	z-index:950;
+	list-style:none;
+}
+
+.clearBoth {
+	clear:both;
+	height:0;
+	font-size:0;
+	line-height:0;
+	}
+	
+	

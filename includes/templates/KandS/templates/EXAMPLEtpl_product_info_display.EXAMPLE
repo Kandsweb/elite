@@ -1,0 +1,15 @@
+
+<!--bof Wishlist button -->
+
+			<?php if (UN_MODULE_WISHLISTS_ENABLED) { ?>
+            <div id="productWishlistLink" class="buttonRow back">
+            <?php echo zen_image_submit(UN_BUTTON_IMAGE_WISHLIST_ADD, UN_BUTTON_WISHLIST_ADD_ALT, 'name="wishlist" value="yes"');
+            //print_r($_REQUEST);
+            ?></div>
+
+		<?php }
+			else
+			{}
+			?>
+<!--eof Wishlist button -->
+
