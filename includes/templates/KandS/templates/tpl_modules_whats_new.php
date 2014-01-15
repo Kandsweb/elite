@@ -33,6 +33,7 @@
     //set the carousel vars
     $carousel_id='recent_carousel';
     $carousel_class='jcarousel-skin-tango';
+//echo 'lb='.print_r($list_box_contents).'<br>';
 ?>
 <div class="centerBoxWrapper whatsNew">
 <?php
@@ -51,6 +52,8 @@
       //set the carousel vars
       $carousel_id='recent_carousel_2';
       $carousel_class='jcarousel-skin-tango';
+
+//echo 'lb='.print_r($list_box_contents).'<br>';
       ?>
       <div class="centerBoxWrapper whatsNew">
       <?php

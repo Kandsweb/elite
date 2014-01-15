@@ -6,13 +6,11 @@
 //    Set the id and the class in the calling page
 //
 ////////////////////////////////////////////////////////////////////////////////////
-?>
-<?php
+
   if ($title) {
-  ?>
-<?php echo $title; ?>
-<?php
+  	echo $title;
  }
+
  ?>
 <ul id="<?php echo $carousel_id; ?>" class="<?php echo $carousel_class; ?>">
 <?php

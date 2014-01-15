@@ -1399,7 +1399,9 @@ if ((isset($_POST['localfile']) or $_GET['split']==2) or ((isset($_FILES['usrfl'
 					break;
 				}
 
-				$v_date_added = ($v_date_added == 'NULL') ? CURRENT_TIMESTAMP : $v_date_added;
+				//KandS 14-1-14 - Removed line below as for new product the date added will always be CURRENT_TIMESTAMP
+				//								The sql statement below is now hard coded with this
+				//$v_date_added = ($v_date_added == 'NULL'||$v_date_added == '0000-00-00 00:00:00') ? CURRENT_TIMESTAMP : $v_date_added;
 
 				$sql = "SHOW TABLE STATUS LIKE '".TABLE_PRODUCTS."'";
 				$result = ep_query($sql);
@@ -1424,13 +1426,12 @@ if ((isset($_POST['localfile']) or $_GET['split']==2) or ((isset($_FILES['usrfl'
 						products_quantity,
 						manufacturers_id, master_categories_id)
 							VALUES (
-								'".zen_db_input($v_products_image)."',";
-				// redundant image mods removed
-				$query .="'".zen_db_input($v_products_model)."',
+									'".zen_db_input($v_products_image)."',
+									'".zen_db_input($v_products_model)."',
 									'".zen_db_input($v_products_price)."',
 									'".zen_db_input($v_db_status)."',
 									CURRENT_TIMESTAMP,
-									$v_date_added,
+									CURRENT_TIMESTAMP,
 									$v_date_avail,
 									'".zen_db_input($v_tax_class_id)."',
 									'".zen_db_input($v_products_weight)."',
@@ -1462,8 +1463,8 @@ if ((isset($_POST['localfile']) or $_GET['split']==2) or ((isset($_FILES['usrfl'
 				// existing product, get the id from the query and update the product data
 
 				// if date added is null, let's keep the existing date in db..
-				$v_date_added = ($v_date_added == 'NULL') ? $row['v_date_added'] : $v_date_added; // if NULL, let's try to use date in db
-				$v_date_added = zen_not_null($v_date_added) ? $v_date_added : CURRENT_TIMESTAMP; // if updating, but date added is null, we use today's date
+				$v_date_added = ($v_date_added == NULL || $v_date_added == "\"0000-00-00 00:00:00\"") ? $row['v_date_added'] : $v_date_added; // if NULL, let's try to use date in db
+				$v_date_added = ($v_date_added != NULL && $v_date_added != "\"0000-00-00 00:00:00\"") ? $v_date_added : CURRENT_TIMESTAMP; // if updating, but date added is null, we use today's date
 
         if ($ep_debug_logging == true)  write_debug_log("\nDEBUG Line:" .__LINE__."\n");
 				$row =  mysql_fetch_array($result);
@@ -1471,17 +1472,16 @@ if ((isset($_POST['localfile']) or $_GET['split']==2) or ((isset($_FILES['usrfl'
 				$row =  mysql_fetch_array($result); // langer - is this to reset array, or an accidental duplication?!?
 				$query = 'UPDATE '.TABLE_PRODUCTS.'
 						SET
-						products_price="'.zen_db_input($v_products_price).
-            '" ,products_image="'.zen_db_input($v_products_image);
-            $query .= '", products_weight="'.zen_db_input($v_products_weight). '"' .
-						//'", products_tax_class_id="'.zen_db_input($v_tax_class_id) . '"' .
-						//'", products_date_available= ' . $v_date_avail .
-						//', products_date_added= ' . $v_date_added .
-						', products_last_modified=CURRENT_TIMESTAMP' .
-						', products_quantity="' . zen_db_input($v_products_quantity) .
-						'" ,manufacturers_id=' . $v_manufacturer_id .
-						' , products_status=' . zen_db_input($v_db_status) .
-            ', master_categories_id= ' . zen_db_input($thecategory_id) . '
+							products_price="'.zen_db_input($v_products_price).'",
+	            products_image="'.zen_db_input($v_products_image).'",
+	            products_weight= 0,
+							products_date_available= ' . $v_date_avail .',
+							products_date_added= ' . $v_date_added .',
+							products_last_modified= CURRENT_TIMESTAMP,
+							products_quantity="' . zen_db_input($v_products_quantity).'" ,
+							manufacturers_id=' . $v_manufacturer_id .' ,
+							products_status=' . zen_db_input($v_db_status) .',
+	            master_categories_id= ' . zen_db_input($thecategory_id) . '
 						WHERE
 							(products_id = "'. $v_products_id . '")';
         if ($ep_debug_logging == true)  write_debug_log("\nDEBUG Line:" .__LINE__."\n");

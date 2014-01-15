@@ -1,4 +1,6 @@
-
+$( document ).ready(function() {
+	$('.whatsNew').show();
+});
 
 var clickmessage="Images Copyrighted. Please do not copy."
 

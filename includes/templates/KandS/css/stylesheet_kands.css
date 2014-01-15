@@ -63,6 +63,8 @@ fieldset.unified legend, fieldset legend {background-color: #FFFFFF;border: 1px 
 
 #bannerThree{margin:0px 0px 10px 0px;}
 
+
+
 .centerColumn{
 margin-left:10px;
 margin-right: 10px;
@@ -329,6 +331,7 @@ box-shadow: 3px 3px 4px #000;*/}
        -moz-border-radius: 15px 15px 0px 0px;
    -webkit-border-radius:  15px 15px 0px 0px;
    border-radius:  15px 15px 0px 0px;
+   display: none;
 }
 
 .eventLink{

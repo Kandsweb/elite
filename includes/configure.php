@@ -23,8 +23,8 @@
 // NOTE: be sure to leave the trailing '/' at the end of these lines if you make changes!
 // * DIR_WS_* = Webserver directories (virtual/URL)
   // these paths are relative to top of your webspace ... (ie: under the public_html or httpdocs folder)
-  define('DIR_WS_CATALOG', '/elite_kands/');
-  define('DIR_WS_HTTPS_CATALOG', '/elite_kands/');
+  define('DIR_WS_CATALOG', '/elitelighting/');
+  define('DIR_WS_HTTPS_CATALOG', '/elitelighting/');
 
   define('DIR_WS_IMAGES', 'images/');
   define('DIR_WS_INCLUDES', 'includes/');
@@ -39,7 +39,7 @@
 
 // * DIR_FS_* = Filesystem directories (local/physical)
   //the following path is a COMPLETE path to your Zen Cart files. eg: /var/www/vhost/accountname/public_html/store/
-  define('DIR_FS_CATALOG', 'C:/Users/Steven/Documents/htdocs/elite_kands/');
+  define('DIR_FS_CATALOG', 'C:/Users/Steven/Documents/htdocs/elitelighting/');
 
   define('DIR_FS_DOWNLOAD', DIR_FS_CATALOG . 'download/');
   define('DIR_FS_DOWNLOAD_PUBLIC', DIR_FS_CATALOG . 'pub/');
@@ -76,6 +76,6 @@
   // or webserver user has write privileges (chmod 666 or 777). We recommend using the "cache" folder inside the Zen Cart folder
   // ie: /path/to/your/webspace/public_html/zen/cache   -- leave no trailing slash
   define('SQL_CACHE_METHOD', 'database');
-  define('DIR_FS_SQL_CACHE', 'C:/Users/Steven/Documents/htdocs/elite_kands/cache');
+  define('DIR_FS_SQL_CACHE', 'C:/Users/Steven/Documents/htdocs/elitelighting/cache');
 
 // EOF

@@ -6,10 +6,11 @@
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
  * @version $Id: stats_products_purchased.php 15014 2009-12-01 21:24:50Z drbyte $
  */
+ define('KAS_DEBUG',false);
 
   require('includes/application_top.php');
 
-  $sql = "SELECT DISTINCT
+$sql = "SELECT DISTINCT
   p.products_id,
   p.products_model,
   p.products_image,
@@ -91,6 +92,7 @@ $num_of_rows = $res->RecordCount();
           </tr>
           <tr><td>
 <?php
+//Table headings
 echo "<table border='1'><tr><td></td>";
   foreach($res->fields as $key => $value){
     echo "<td>" . $key . '</td>';
@@ -108,10 +110,10 @@ for ($r = 0; $r < $num_of_rows; $r++){
 $count=0;
 for ($r = 0; $r < sizeof($f_array); $r++){
   if(!file_exists('../images/'.$f_array[$r][2])){
-      //echo '../images/'.$f_array[$r][2].' -- '.!file_exists('../images/'.$f_array[$r][2]).'<br/>';
+ 		if(KAS_DEBUG)echo '../images/'.$f_array[$r][2].' -- '.!file_exists('../images/'.$f_array[$r][2]).'<br/>';
     $xref = get_image_xref($f_array[$r][2]);
     if(!file_exists('../images/' . $xref)){
-        //echo '../images/' . $xref.' -== '.!file_exists('../images/' . $xref).'<br/>';
+	 		 if(KAS_DEBUG)echo 'S2../images/' . $xref.' -== '.!file_exists('../images/' . $xref).'<br/>';
        $count++;
        echo '<tr>';
        echo '<td>' . $count . '</td>';

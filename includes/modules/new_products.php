@@ -8,6 +8,10 @@
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
  * @version $Id: new_products.php 8730 2008-06-28 01:31:22Z drbyte $
  */
+ //KaS Debug output - Set following to true
+ define('KAS_DEBUG',0);
+
+
 if (!defined('IS_ADMIN_FLAG')) {
   die('Illegal Access');
 }
@@ -16,13 +20,15 @@ if (!defined('IS_ADMIN_FLAG')) {
 $categories_products_id_list = '';
 $list_of_products = '';
 $new_products_query = '';
+//KandS -- $new_products_category_id should be set before coming here if you are looking the new products for a specific category
 
-//echo __FILE__.__LINE__.'<br />'. $new_products_category_id;
+if(KAS_DEBUG)echo __FILE__.__LINE__.'<br />$new_products_category_id='. $new_products_category_id.'<br>';
 
 $display_limit = zen_get_new_date_range();
 
 if (!isset($new_products_category_id) || $new_products_category_id == '0' ) {
-  //echo __FILE__ . __LINE__;
+	//KandS -- only for cat id 0 or if not cat id is given
+  if(KAS_DEBUG)echo 'S1'.__FILE__ . __LINE__.'<br>';
   $new_products_query = "select distinct p.products_model, p.products_id, p.products_image, p.products_tax_class_id, pd.products_name,
                                 p.products_date_added, p.products_price, p.products_type, p.master_categories_id
                            from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd
@@ -31,9 +37,12 @@ if (!isset($new_products_category_id) || $new_products_category_id == '0' ) {
                            and   p.products_status = 1 " . $display_limit . " GROUP BY LEFT(p.products_model, 8) ORDER BY RAND()";
 } else {
   // get all products and cPaths in this subcat tree
-  //echo __FILE__ . __LINE__;
+  //KandS -- working with a given cat
+  if(KAS_DEBUG)echo 'S2'.__FILE__ . __LINE__.'<br>';
+
   $productsInCategory = zen_get_categories_products_list($new_products_category_id, false, true, 0, $display_limit);
 
+	if(KAS_DEBUG)echo print_r($productsInCategory).'<br>';
   if (is_array($productsInCategory) && sizeof($productsInCategory) > 0) {
     // build products-list string to insert into SQL query
     foreach($productsInCategory as $key => $value) {
@@ -47,17 +56,18 @@ if (!isset($new_products_category_id) || $new_products_category_id == '0' ) {
                            where p.products_id = pd.products_id
                            and pd.language_id = '" . (int)$_SESSION['languages_id'] . "'
                            and p.products_status = 1
-                           and p.products_id in (" . $list_of_products . ") GROUP BY LEFT(p.products_model, 8) ORDER BY RAND()";
+                           and p.products_id in (" . $list_of_products . ")";
   }
 }
-if ($new_products_query != '') $new_products = $db->ExecuteRandomMulti($new_products_query, MAX_DISPLAY_NEW_PRODUCTS);
+if ($new_products_query != '')
+	$new_products = $db->ExecuteRandomMulti($new_products_query, MAX_DISPLAY_NEW_PRODUCTS);
 
 $row = 0;
 $col = 0;
 $list_box_contents = array();
 $title = '';
 
-//echo __FILE__.__LINE__.'<br />'. $new_products_query;
+if(KAS_DEBUG)echo __FILE__.__LINE__.'<br />'. $new_products_query.'<br/>';
 $num_products_count = ($new_products_query == '') ? 0 : $new_products->RecordCount();
 
 // show only when 1 or more
@@ -68,6 +78,7 @@ if ($num_products_count > 0) {
     $col_width = floor(100/SHOW_PRODUCT_INFO_COLUMNS_NEW_PRODUCTS);
   }
 
+  reset($new_products);//KandS -- Added 13/1/14 to stop one item appearing twice
   while (!$new_products->EOF) {
 
     $new_products->fields['products_image']=get_image_xref($new_products->fields['products_image']);
